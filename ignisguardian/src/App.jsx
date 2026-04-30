@@ -4,12 +4,14 @@ import viteLogo from '/vite.svg'
 import FireAlarmLogin from './pages/LoginPages'
 import FireAlarmRegister from './pages/RegisterPages'
 import FireAlarmDashboard from './pages/MainMenu'
+import ChatbotWidget from "./ChatbotWidget";
 
 function App() {
 
   return (
     <>
       <FireAlarmDashboard></FireAlarmDashboard>
+      <ChatbotWidget />
     </>
   )
 }

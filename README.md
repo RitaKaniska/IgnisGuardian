@@ -9,22 +9,22 @@
   <img alt="Gemini API" src="https://img.shields.io/badge/Gemini_API-1A73E8?style=for-the-badge&logo=google&logoColor=white" />
 </p>
 
-IgnisGuardian la ung dung web ho tro xac thuc nguoi dung bang Firebase Authentication va tich hop chatbot AI thong qua Gemini API.
+IgnisGuardian là ứng dụng web hỗ trợ xác thực người dùng bằng Firebase Authentication và tích hợp chatbot AI thông qua Gemini API.
 
-## Tinh nang chinh
+## Tính năng chính
 
-- Dang ky va dang nhap nguoi dung.
-- Giao dien chinh sau khi xac thuc.
-- Chatbot widget tuong tac voi backend Express.
-- API chat su dung Gemini de phan hoi tieng Viet ngan gon.
+- Đăng ký và đăng nhập người dùng.
+- Giao diện chính sau khi xác thực.
+- Chatbot widget tương tác với backend Express.
+- API chat sử dụng Gemini để phản hồi tiếng Việt ngắn gọn.
 
-## Cong nghe su dung
+## Công nghệ sử dụng
 
 - Frontend: React, Vite, Tailwind CSS, React Router, Firebase.
 - Backend: Node.js, Express, CORS, dotenv, Google Generative AI SDK.
-- Quan ly goi: npm.
+- Quản lý gói: npm.
 
-## Cau truc thu muc
+## Cấu trúc thư mục
 
 ```text
 IgnisGuardian/
@@ -32,7 +32,7 @@ IgnisGuardian/
 `- server/          # Backend API (Express + Gemini)
 ```
 
-## Cai dat va chay du an
+## Cài đặt và chạy dự án
 
 ### 1) Clone source code
 
@@ -41,7 +41,7 @@ git clone <repository-url>
 cd IgnisGuardian
 ```
 
-### 2) Cai dat dependencies
+### 2) Cài đặt dependencies
 
 ```bash
 cd ignisguardian
@@ -50,42 +50,42 @@ cd ../server
 npm install
 ```
 
-### 3) Cau hinh bien moi truong
+### 3) Cấu hình biến môi trường
 
-Tao file `server/.env`:
+Tạo file `server/.env`:
 
 ```env
 GEMINI_API_KEY=your_gemini_api_key
 PORT=3001
 ```
 
-Khuyen nghi: dua thong tin Firebase ve bien moi truong frontend (`VITE_*`) thay vi hard-code trong source.
+Khuyến nghị: đưa thông tin Firebase về biến môi trường frontend (`VITE_*`) thay vì hard-code trong source.
 
-### 4) Chay backend
+### 4) Chạy backend
 
 ```bash
 cd server
 npm run dev
 ```
 
-### 5) Chay frontend
+### 5) Chạy frontend
 
 ```bash
 cd ignisguardian
 npm run dev
 ```
 
-Frontend mac dinh: `http://localhost:5173`  
-Backend mac dinh: `http://localhost:3001`
+Frontend mặc định: `http://localhost:5173`  
+Backend mặc định: `http://localhost:3001`
 
-## API hien co
+## API hiện có
 
-- `GET /api/health`: Kiem tra trang thai server.
-- `POST /api/chat`: Gui message hoac lich su chat de nhan phan hoi tu Gemini.
+- `GET /api/health`: Kiểm tra trạng thái server.
+- `POST /api/chat`: Gửi message hoặc lịch sử chat để nhận phản hồi từ Gemini.
 
-## Huong mo rong de san pham hoa
+## Hướng mở rộng để sản phẩm hóa
 
-- Tach cau hinh Firebase sang `.env`.
-- Bo sung error handling va logging cho backend.
-- Them test cho luong dang nhap/dang ky va API chat.
-- Thiet lap CI de kiem tra lint/build tu dong.
+- Tách cấu hình Firebase sang `.env`.
+- Bổ sung error handling và logging cho backend.
+- Thêm test cho luồng đăng nhập/đăng ký và API chat.
+- Thiết lập CI để kiểm tra lint/build tự động.
